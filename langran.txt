@@ -14,4 +14,4 @@ end
 end
 s=s+p+y(i)
 end
-disp(add,"Interpolated answer:")
+disp(s,"Interpolated answer:")
