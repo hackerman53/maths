@@ -1,0 +1,24 @@
+x=input("Enter value of x as Row Matrix: ")
+y=input("Enter value of y as Row Matrix: ")
+z=input("Enter value of z to interpolate: ")
+n=length(x)
+disp(n)
+
+d=zeros(n,n+1);
+for i=1:n
+d(i,1)=x(i);
+d(i,2)=y(i);
+end
+for j=3:n+1
+for i=1:n-j+2
+d(i,j)=(d(i+1,j-1)-d(i,j-1)/(x(i+j-2)-x(i));
+end
+end
+disp(d,"divided difference table is below");
+fz=0
+t=1
+for i=1:n
+fz=fz+t*d(1,i+1);
+t=t*(z-x(i));
+end
+disp(fz,"Interpolation of fz is")
