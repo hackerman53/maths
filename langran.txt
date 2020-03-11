@@ -1,0 +1,17 @@
+
+x=input("Enter value of x as Row Matrix: ")
+y=input("Enter value of y as Row Matrix: ")
+xg=input("Enter value of xg to interpolate: ")
+n=length(x)
+disp(n)
+s=0
+for i=1:n
+p=1
+for j=1:n
+if j<>i then
+p=p*(xg-x[j]/x[i]-x[j])
+end
+end
+s=s+p+y(i)
+end
+disp(add,"Interpolated answer:")
